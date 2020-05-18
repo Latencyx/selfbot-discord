@@ -5,21 +5,21 @@
 console.log( '\n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n\nScript by martin3lli\n@0xdwn\n\n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀' );
 const botconfig = require("./config.json");
 const Discord = require("discord.js");
-const bot = new Discord.Client({disableEveryone: false});
+const martinelli = new Discord.Client({disableEveryone: false});
 
-bot.on("ready", async () => {   
+martinelli.on("ready", async () => {   
     var x = 0,
     //nome_loop = ["m", "ma", "mar", "mart", "marti", "martin", "martin3", "martin3l", "martin3ll", "martin3lli"];
     //nome_loop = ["✈️  🏢", "-✈️    🏢", "--✈️  🏢", "💥"];
     nome_loop = ["oi", "oi c", "oi ca", "oi cas", "oi casa", "oi casad", "oi casada"];
     function nome_ale(){ 
-       bot.guilds.get('512799021702709258').members.get(bot.user.id).setNickname(nome_loop[x++ % nome_loop.length]); // BDT     
+       martinelli.guilds.get('512799021702709258').members.get(martinelli.user.id).setNickname(nome_loop[x++ % nome_loop.length]); // BDT     
    }
        setInterval(nome_ale, 500);
     });
    
-  bot.on("message", async message => {
-  //if(message.author.bot) return;
+  martinelli.on("message", async message => {
+  //if(message.author.martinelli) return;
   if(message.channel.type === "dm") return;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
@@ -55,4 +55,4 @@ bot.on("ready", async () => {
   
   
   
-  bot.login(botconfig.your_token);
+  martinelli.login(botconfig.your_token);

@@ -9,10 +9,9 @@ const martinelli = new Discord.Client({ disableEveryone: false });
 
 martinelli.on("ready", async () => {
   var x = 0,
-    //nome_loop = ["m", "ma", "mar", "mart", "marti", "martin", "martin3", "martin3l", "martin3ll", "martin3lli"];
+    nome_loop = ["m", "ma", "mar", "mart", "marti", "martin", "martin3", "martin3l", "martin3ll", "martin3lli"];
     //nome_loop = ["✈️  🏢", "-✈️    🏢", "--✈️  🏢", "💥"];
-    nome_loop = ["oi", "oi c", "oi ca", "oi cas", "oi casa", "oi casad", "oi casada"];
-  function nome_ale() {
+    function nome_ale() {
     martinelli.guilds.get('GUILD ID HERE').members.get(martinelli.user.id).setNickname(nome_loop[x++ % nome_loop.length]); // BDT     
   }
   setInterval(nome_ale, 500);
